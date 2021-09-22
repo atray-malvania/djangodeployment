@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{% extends "second_app/navbar.html" %}
+{% load static %}
+{% load admin_urls %}
+    {% block body_block %}
+      <h1>Welcome to index page</h1>
+      <h2><a href="{% url 'second_app:signup' %}">Click to sign up</a></h2>
+    {% endblock %}

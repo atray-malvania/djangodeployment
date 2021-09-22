@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "second_app/navbar.html" %}
+{% load static %}
+{% block body_block %}
+  {% if my_data %}
+  <table class="mydjango">
+    <thead>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+    </thead>
+      {% for items in my_data %}
+      <tr>
+        <td>{{ items.first_name }}</td>
+        <td>{{ items.last_name }}</td>
+        <td>{{ items.email }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+  {% else %}
+  <p>No Data To Show</p>
+  {% endif %}
+{% endblock %}

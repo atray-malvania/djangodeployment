@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "second_app/navbar.html" %}
+{% load static %}
+{% block body_block %}
+        <form method="POST">
+            <div class="form-group">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary btn-lg" value="Submit">Submit</button>
+            </div>
+        </form>
+{% endblock %}
